@@ -1,2 +1,2 @@
 # DogsAdoption
-Dogs website
+Adoption website: http://ewsc.byethost33.com/MainPage.html
