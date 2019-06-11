@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Registration</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset= "utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  var y = document.forms["myForm"]["email"].value;
+  var z = document.forms["myForm"]["password"].value;
+  var p = document.forms["myForm"]["password_confirm"].value;
+
+if (x == null || x == "") {
+document.getElementById('nameError').style.color = 'red';
+document.getElementById("nameError").innerHTML="name must filled out";
+return false;
+}
+if (y == null || y == "") {
+document.getElementById('emailError').style.color = 'red';
+document.getElementById("emailError").innerHTML="email must filled out";
+return false;
+}
+if (z == null || z == "") {
+  document.getElementById('passError').style.color = 'red';
+document.getElementById("passError").innerHTML="password cannot be empty";
+return false;
+}
+if (p == null || p == "") {
+document.getElementById('passErrorr').style.color = 'red';
+document.getElementById("passErrorr").innerHTML="password cannot be empty";
+return false;
+}
+if(x != null && y != null && z==p){
+     alert("You fill the form seccessfully");
+
+}
+if(z != p){
+  document.getElementById('passError').style.color = 'red';
+  document.getElementById("passError").innerHTML="password don't match!";
+  return false;
+}
+
+}
+</script
+</head>
+
+<body>
+<form name="myForm" action="MainPage.html" onsubmit="return validateForm()"
+method="post">
+<form action="/action_page.php">
+Name: <input type="text" name="fname" pattern="[A-Za-z]{2,}" title="enter only letters" id="fName"> <label id=nameError></label> <br><br>
+E-mail: <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="em"><label id=emailError></label><br><br>
+Password: <input name="password"  type="password" pattern="[A-Za-z0-9]{6,}" title="Six or more characters- only letters and numbers" id="password"/>
+<label id=passError></label><br><br>
+Confirm Password: <input name="password_confirm" type="password" pattern="[A-Za-z0-9]{6,}"  title="Six or more characters- only letters and numbers" oninput="check(this)" id="password_confirm" />
+<label id=passErrorr></label><br><br>
+<script language='javascript' type='text/javascript'>
+    function check(input) {
+        if (input.value != document.getElementById('password').value) {
+            document.getElementById('passErrorr').style.color = 'red';
+            document.getElementById("passErrorr").innerHTML="Password Must be Matching";
+        } else {
+            // input is valid -- reset the error message
+            input.setCustomValidity('');
+        }
+    }
+</script>
+<br /><br />
+<input type="submit" class="btn btn-info btn-lg" value="Submit">
+<div class="container">
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Don't want to adopt</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"> It's OK</h4>
+        </div>
+        <div class="modal-body">
+          <p>You choose not to sumbit an adoption form</p>
+        </div>
+        <div class="modal-footer">
+          <button onclick="location.href = 'file:///C:/Users/eazran/Desktop/Limodim/%D7%A9%D7%A0%D7%94%20%D7%92/%D7%9E%D7%91%D7%95%D7%A1%D7%A1%D7%95%D7%AA%20%D7%95%D7%95%D7%90%D7%91/MainPage.html';" id="myButton1" class="btn btn-default" data-dismiss="modal">back to manu</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").toggle();
+    });
+});
+</script>
+<br>
+<p>To restore the password</p>
+<button id="myButton">Click</button>
+<!--dont working- i need to figure out how can i play the alert box by clicking the submit-->
+<!-- also i need to know how i get raid of the css in this page and transfer it to the css page where its ment to be- not critical!-->
+</form>
+</body>
+
+</html>

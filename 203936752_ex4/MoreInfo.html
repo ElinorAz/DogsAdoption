@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>More Info</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body class="body12">
+
+  <script>
+  $(document).ready(function(){
+      $("p").hover(function(){
+          $(this).css("background-color", "yellow");
+          }, function(){
+          $(this).css("background-color", "white");
+      });
+  });
+  </script>
+
+  <p>  מידע על גורי כלבים</p>
+
+<p id="p1">
+  מה עושים כשהגור מגיע הביתה?
+1. הופ למעלה!
+כשגור חדש מגיע הביתה, החפצים עולים מהרצפה למעלה.
+הדבר חשוב לבטיחות הגור שלכם ולשלמות החפצים שלכם. סביר שהגור החדש שלכם יתעניין בדברים כמו הנעליים החדשות שלכם, השטיח היפה שקניתם, חומרי הניקוי שהשארתם בשירותים, כבל החשמל של המחשב ועוד. התבונן סביב ונסה לזהות מה יכול לעניין כלבלב סקרן.
+2. הגבל את הגור שלך לשטח מוגדר-
+יתכן שתרצה להגביל את כלבך לחדר מסוים בבית שם יש פחות פיתויים, עד שיהיה אפשר לסמוך עליו יותר. אם יש לך חצר, ודא שהיא מגודרת היטב ושאין בה פתחי מילוט אפשריים. הדבר האחרון שתרצה הוא לראות את הכלבלב שלך מתחמק ורודף אחרי חתול לכיוון הכביש.
+3. קבע לוח זמנים-
+הגור שלך זקוק לטיפוח, לאכילה, לזמן משחק ולטיולים עבור צרכיו.
+גורים צריכים לאכול מספר פעמים ביום, בניגוד לכלבים בוגרים שיכולים להסתפק בפעם או בפעמיים. בימים הראשונים ההיכרות והטיפול בגור החדש עשויים לקחת יותר זמן ולכן יכול להיות כדאי לאמץ את הגור לקראת סוף השבוע או לפני חופשות כך שיהיו לכם ימים מלאים ורגועים יותר להכיר אחד את השני.
+4. קבע מקום שיהיה רק של הגור שלך –
+...כלבים רבים לא אוהבים להיות מרוחקים מבני הבית ולכן יעדיפו להיות באזור בו יש התקהלות לרוב כמו הסלון. כלבים אחרים עשויים להיות נרגשים מדי ממקום עמוס התרחשויות, ולהעדיף פינה שקטה יותר. מקם את אזור השינה והחפצים של הגור שלך באזור שנראה לך מתאים ושים לב האם הוא מרוצה במקומו החדש או שלא. תמיד תוכל לנסות ולהחליף את המיקום.
+</p>
+<br>
+<img src="http://www.biopet.co.il/app/uploads/2017/01/1-1.png">
+<!-- wrote this in the Main.css but i dont know if i can write like this, remark: go to the Main.css and see-->
+<script>
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        $("p").append("<b> There are more then four recommended puppies</b>.");
+    });
+    $("#btn2").click(function(){
+        $("ol").append("<li>Amstaf</li>");
+    });
+});
+</script>
+
+<h2 id="H2">
+<p>  List of recommended puppies:</p>
+</h2>
+
+<ol>
+  <li>Pincher</li>
+  <li>Pitbull</li>
+  <li>Lavrador</li>
+  <li>Australian puppy</li>
+</ol>
+<button id="btn1">Mark</button>
+<button id="btn2">See more</button>
+
+<a href="#" data-toggle="tooltip" title="24 in April">An adoption day</a> <br><br>
+<button onclick="location.href = 'file:///C:/Users/eazran/Desktop/Limodim/%D7%A9%D7%A0%D7%94%20%D7%92/%D7%9E%D7%91%D7%95%D7%A1%D7%A1%D7%95%D7%AA%20%D7%95%D7%95%D7%90%D7%91/DogsPictures.html';" id="myButton" class="float-left submit-button" >Dogs Pic</button>
+<button onclick="location.href = 'file:///C:/Users/eazran/Desktop/Limodim/%D7%A9%D7%A0%D7%94%20%D7%92/%D7%9E%D7%91%D7%95%D7%A1%D7%A1%D7%95%D7%AA%20%D7%95%D7%95%D7%90%D7%91/MainPage.html';" id="myButton" class="float-left submit-button" >Main Page</button>
+
+</body>
+</html>
